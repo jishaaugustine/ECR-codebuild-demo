@@ -10,10 +10,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t ecr-codebuild-demo .
-      - docker tag ecr-codebuild-demo:latest 448049796748.dkr.ecr.eu-north-1.amazonaws.com/ecr-codebuild-demo:latest
+      - docker build -t ecr-demo .
+      - docker tag ecr-demo:latest 448049796748.dkr.ecr.eu-north-1.amazonaws.com/ecr-demo:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 448049796748.dkr.ecr.eu-north-1.amazonaws.com/ecr-codebuild-demo:latest
+      - docker push 448049796748.dkr.ecr.eu-north-1.amazonaws.com/ecr-demo:latest
